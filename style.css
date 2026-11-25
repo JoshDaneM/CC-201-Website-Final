@@ -1,0 +1,123 @@
+
+/* Basic Website Design */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #245c45;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* Search Section */
+.search-section {
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+}
+
+.search-section h2 {
+    color: #245c45;
+}
+
+/* Search Input */
+input {
+    width: 50%;
+    padding: 12px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    background-color: #245c45;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #36845f;
+}
+
+/* Filter Buttons */
+.filters {
+    margin-top: 20px;
+}
+
+/* Places Layout */
+.places {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+/* Individual Place Card */
+.place-card {
+    background-color: white;
+    width: 280px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #cccccc;
+    box-sizing: border-box;
+}
+
+/* Place Pictures */
+.place-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+}
+
+/* Place Names */
+.place-card h3 {
+    color: #245c45;
+}
+
+/* Footer */
+footer {
+    background-color: #245c45;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Smaller Screens */
+@media (max-width: 850px) {
+    .places {
+        flex-wrap: wrap;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+
+    input {
+        width: 90%;
+    }
+}
