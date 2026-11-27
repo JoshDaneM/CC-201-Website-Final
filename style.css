@@ -1,4 +1,3 @@
-
 /* Basic Website Design */
 body {
     font-family: Arial, sans-serif;
@@ -14,6 +13,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+header h2 a {
+    color: white;
+    text-decoration: none;
 }
 
 nav a {
@@ -34,7 +38,7 @@ nav a {
 }
 
 /* Search Input */
-input {
+.search-section input {
     width: 50%;
     padding: 12px;
     margin: 10px;
@@ -54,6 +58,15 @@ button {
 
 button:hover {
     background-color: #36845f;
+}
+
+/* Red buttons (Delete) */
+button.danger {
+    background-color: #b33a3a;
+}
+
+button.danger:hover {
+    background-color: #d04a4a;
 }
 
 /* Filter Buttons */
@@ -90,9 +103,113 @@ button:hover {
     border-radius: 5px;
 }
 
+/* Gray box shown when a place has no picture */
+.no-photo {
+    background-color: #dddddd;
+    color: #666666;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
 /* Place Names */
 .place-card h3 {
     color: #245c45;
+}
+
+/* ---------- Other pages (details, login, admin, profile) ---------- */
+
+/* Page container */
+.page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* White boxes */
+.box {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #cccccc;
+}
+
+.box h2 {
+    color: #245c45;
+}
+
+/* Big photo on the details page */
+.big-photo {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+}
+
+/* Forms */
+.form-box label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.form-box input,
+.form-box select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.form-box button {
+    margin-left: 0;
+    margin-top: 15px;
+}
+
+/* Login page: two boxes side by side */
+.two-columns {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.two-columns .box {
+    flex: 1;
+    min-width: 280px;
+}
+
+/* Comments */
+.comment {
+    border-top: 1px solid #dddddd;
+    padding: 10px 0;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #dddddd;
+}
+
+th {
+    background-color: #e8f0ec;
+    color: #245c45;
+}
+
+/* Small messages under forms */
+.message {
+    color: #b33a3a;
 }
 
 /* Footer */
@@ -117,7 +234,13 @@ footer {
         margin-top: 15px;
     }
 
-    input {
+    .search-section input {
         width: 90%;
+    }
+
+    /* Let tables scroll sideways on small screens */
+    table {
+        display: block;
+        overflow-x: auto;
     }
 }
